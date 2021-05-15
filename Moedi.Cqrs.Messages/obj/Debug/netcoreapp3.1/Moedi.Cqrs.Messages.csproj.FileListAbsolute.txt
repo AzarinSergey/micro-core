@@ -1,8 +1,0 @@
-C:\Users\azarin.sa\source\repos\SimpleCrud\.core\Moedi.Cqrs.Messages\bin\Debug\netcoreapp3.1\Moedi.Cqrs.Messages.deps.json
-C:\Users\azarin.sa\source\repos\SimpleCrud\.core\Moedi.Cqrs.Messages\bin\Debug\netcoreapp3.1\Moedi.Cqrs.Messages.dll
-C:\Users\azarin.sa\source\repos\SimpleCrud\.core\Moedi.Cqrs.Messages\bin\Debug\netcoreapp3.1\Moedi.Cqrs.Messages.pdb
-C:\Users\azarin.sa\source\repos\SimpleCrud\.core\Moedi.Cqrs.Messages\obj\Debug\netcoreapp3.1\Moedi.Cqrs.Messages.AssemblyInfoInputs.cache
-C:\Users\azarin.sa\source\repos\SimpleCrud\.core\Moedi.Cqrs.Messages\obj\Debug\netcoreapp3.1\Moedi.Cqrs.Messages.AssemblyInfo.cs
-C:\Users\azarin.sa\source\repos\SimpleCrud\.core\Moedi.Cqrs.Messages\obj\Debug\netcoreapp3.1\Moedi.Cqrs.Messages.csproj.CoreCompileInputs.cache
-C:\Users\azarin.sa\source\repos\SimpleCrud\.core\Moedi.Cqrs.Messages\obj\Debug\netcoreapp3.1\Moedi.Cqrs.Messages.dll
-C:\Users\azarin.sa\source\repos\SimpleCrud\.core\Moedi.Cqrs.Messages\obj\Debug\netcoreapp3.1\Moedi.Cqrs.Messages.pdb
