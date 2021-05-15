@@ -1,0 +1,17 @@
+C:\Users\azarin.sa\source\repos\SimpleCrud\.core\Moedi.Ef\bin\Debug\netcoreapp3.1\Moedi.Ef.deps.json
+C:\Users\azarin.sa\source\repos\SimpleCrud\.core\Moedi.Ef\bin\Debug\netcoreapp3.1\Moedi.Ef.runtimeconfig.json
+C:\Users\azarin.sa\source\repos\SimpleCrud\.core\Moedi.Ef\bin\Debug\netcoreapp3.1\Moedi.Ef.runtimeconfig.dev.json
+C:\Users\azarin.sa\source\repos\SimpleCrud\.core\Moedi.Ef\bin\Debug\netcoreapp3.1\Moedi.Ef.dll
+C:\Users\azarin.sa\source\repos\SimpleCrud\.core\Moedi.Ef\bin\Debug\netcoreapp3.1\Moedi.Ef.pdb
+C:\Users\azarin.sa\source\repos\SimpleCrud\.core\Moedi.Ef\obj\Debug\netcoreapp3.1\Moedi.Ef.csprojAssemblyReference.cache
+C:\Users\azarin.sa\source\repos\SimpleCrud\.core\Moedi.Ef\obj\Debug\netcoreapp3.1\Moedi.Ef.AssemblyInfoInputs.cache
+C:\Users\azarin.sa\source\repos\SimpleCrud\.core\Moedi.Ef\obj\Debug\netcoreapp3.1\Moedi.Ef.AssemblyInfo.cs
+C:\Users\azarin.sa\source\repos\SimpleCrud\.core\Moedi.Ef\obj\Debug\netcoreapp3.1\Moedi.Ef.csproj.CoreCompileInputs.cache
+C:\Users\azarin.sa\source\repos\SimpleCrud\.core\Moedi.Ef\obj\Debug\netcoreapp3.1\Moedi.Ef.csproj.CopyComplete
+C:\Users\azarin.sa\source\repos\SimpleCrud\.core\Moedi.Ef\obj\Debug\netcoreapp3.1\Moedi.Ef.dll
+C:\Users\azarin.sa\source\repos\SimpleCrud\.core\Moedi.Ef\obj\Debug\netcoreapp3.1\Moedi.Ef.pdb
+C:\Users\azarin.sa\source\repos\SimpleCrud\.core\Moedi.Ef\obj\Debug\netcoreapp3.1\Moedi.Ef.genruntimeconfig.cache
+C:\Users\azarin.sa\source\repos\SimpleCrud\.core\Moedi.Ef\bin\Debug\netcoreapp3.1\Moedi.Cqrs.Messages.dll
+C:\Users\azarin.sa\source\repos\SimpleCrud\.core\Moedi.Ef\bin\Debug\netcoreapp3.1\Moedi.Cqrs.Messages.pdb
+C:\Users\azarin.sa\source\repos\SimpleCrud\.core\Moedi.Ef\bin\Debug\netcoreapp3.1\Moedi.Data.Core.dll
+C:\Users\azarin.sa\source\repos\SimpleCrud\.core\Moedi.Ef\bin\Debug\netcoreapp3.1\Moedi.Data.Core.pdb

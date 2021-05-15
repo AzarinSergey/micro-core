@@ -1,0 +1,14 @@
+C:\Users\azarin.sa\source\repos\SimpleCrud\.core\Moedi.Cqrs\bin\Debug\netcoreapp3.1\Moedi.Cqrs.deps.json
+C:\Users\azarin.sa\source\repos\SimpleCrud\.core\Moedi.Cqrs\bin\Debug\netcoreapp3.1\Moedi.Cqrs.dll
+C:\Users\azarin.sa\source\repos\SimpleCrud\.core\Moedi.Cqrs\bin\Debug\netcoreapp3.1\Moedi.Cqrs.pdb
+C:\Users\azarin.sa\source\repos\SimpleCrud\.core\Moedi.Cqrs\bin\Debug\netcoreapp3.1\Moedi.Cqrs.Messages.dll
+C:\Users\azarin.sa\source\repos\SimpleCrud\.core\Moedi.Cqrs\bin\Debug\netcoreapp3.1\Moedi.Data.Core.dll
+C:\Users\azarin.sa\source\repos\SimpleCrud\.core\Moedi.Cqrs\bin\Debug\netcoreapp3.1\Moedi.Cqrs.Messages.pdb
+C:\Users\azarin.sa\source\repos\SimpleCrud\.core\Moedi.Cqrs\bin\Debug\netcoreapp3.1\Moedi.Data.Core.pdb
+C:\Users\azarin.sa\source\repos\SimpleCrud\.core\Moedi.Cqrs\obj\Debug\netcoreapp3.1\Moedi.Cqrs.csprojAssemblyReference.cache
+C:\Users\azarin.sa\source\repos\SimpleCrud\.core\Moedi.Cqrs\obj\Debug\netcoreapp3.1\Moedi.Cqrs.AssemblyInfoInputs.cache
+C:\Users\azarin.sa\source\repos\SimpleCrud\.core\Moedi.Cqrs\obj\Debug\netcoreapp3.1\Moedi.Cqrs.AssemblyInfo.cs
+C:\Users\azarin.sa\source\repos\SimpleCrud\.core\Moedi.Cqrs\obj\Debug\netcoreapp3.1\Moedi.Cqrs.csproj.CoreCompileInputs.cache
+C:\Users\azarin.sa\source\repos\SimpleCrud\.core\Moedi.Cqrs\obj\Debug\netcoreapp3.1\Moedi.Cqrs.csproj.CopyComplete
+C:\Users\azarin.sa\source\repos\SimpleCrud\.core\Moedi.Cqrs\obj\Debug\netcoreapp3.1\Moedi.Cqrs.dll
+C:\Users\azarin.sa\source\repos\SimpleCrud\.core\Moedi.Cqrs\obj\Debug\netcoreapp3.1\Moedi.Cqrs.pdb

@@ -1,0 +1,9 @@
+D:\WebSites\Borneo\enterprise-dev-kit\dev-kit\src\.core\Core.Service.Host.ServiceDiscovery.Interfaces\bin\Release\netcoreapp3.1\Core.Service.Host.ServiceDiscovery.Interfaces.deps.json
+D:\WebSites\Borneo\enterprise-dev-kit\dev-kit\src\.core\Core.Service.Host.ServiceDiscovery.Interfaces\bin\Release\netcoreapp3.1\Core.Service.Host.ServiceDiscovery.Interfaces.dll
+D:\WebSites\Borneo\enterprise-dev-kit\dev-kit\src\.core\Core.Service.Host.ServiceDiscovery.Interfaces\bin\Release\netcoreapp3.1\Core.Service.Host.ServiceDiscovery.Interfaces.pdb
+D:\WebSites\Borneo\enterprise-dev-kit\dev-kit\src\.core\Core.Service.Host.ServiceDiscovery.Interfaces\obj\Release\netcoreapp3.1\Core.Service.Host.ServiceDiscovery.Interfaces.csprojAssemblyReference.cache
+D:\WebSites\Borneo\enterprise-dev-kit\dev-kit\src\.core\Core.Service.Host.ServiceDiscovery.Interfaces\obj\Release\netcoreapp3.1\Core.Service.Host.ServiceDiscovery.Interfaces.csproj.CoreCompileInputs.cache
+D:\WebSites\Borneo\enterprise-dev-kit\dev-kit\src\.core\Core.Service.Host.ServiceDiscovery.Interfaces\obj\Release\netcoreapp3.1\Core.Service.Host.ServiceDiscovery.Interfaces.AssemblyInfoInputs.cache
+D:\WebSites\Borneo\enterprise-dev-kit\dev-kit\src\.core\Core.Service.Host.ServiceDiscovery.Interfaces\obj\Release\netcoreapp3.1\Core.Service.Host.ServiceDiscovery.Interfaces.AssemblyInfo.cs
+D:\WebSites\Borneo\enterprise-dev-kit\dev-kit\src\.core\Core.Service.Host.ServiceDiscovery.Interfaces\obj\Release\netcoreapp3.1\Core.Service.Host.ServiceDiscovery.Interfaces.dll
+D:\WebSites\Borneo\enterprise-dev-kit\dev-kit\src\.core\Core.Service.Host.ServiceDiscovery.Interfaces\obj\Release\netcoreapp3.1\Core.Service.Host.ServiceDiscovery.Interfaces.pdb

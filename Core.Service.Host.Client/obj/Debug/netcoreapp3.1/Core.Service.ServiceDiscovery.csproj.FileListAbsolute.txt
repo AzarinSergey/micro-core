@@ -1,0 +1,17 @@
+D:\WebSites\Borneo\enterprise-dev-kit\Core.Service.ServiceDiscovery\bin\Debug\netcoreapp3.1\Core.Service.ServiceDiscovery.deps.json
+D:\WebSites\Borneo\enterprise-dev-kit\Core.Service.ServiceDiscovery\bin\Debug\netcoreapp3.1\Core.Service.ServiceDiscovery.dll
+D:\WebSites\Borneo\enterprise-dev-kit\Core.Service.ServiceDiscovery\bin\Debug\netcoreapp3.1\Core.Service.ServiceDiscovery.pdb
+D:\WebSites\Borneo\enterprise-dev-kit\Core.Service.ServiceDiscovery\obj\Debug\netcoreapp3.1\Core.Service.ServiceDiscovery.csprojAssemblyReference.cache
+D:\WebSites\Borneo\enterprise-dev-kit\Core.Service.ServiceDiscovery\obj\Debug\netcoreapp3.1\Core.Service.ServiceDiscovery.csproj.CoreCompileInputs.cache
+D:\WebSites\Borneo\enterprise-dev-kit\Core.Service.ServiceDiscovery\obj\Debug\netcoreapp3.1\Core.Service.ServiceDiscovery.AssemblyInfoInputs.cache
+D:\WebSites\Borneo\enterprise-dev-kit\Core.Service.ServiceDiscovery\obj\Debug\netcoreapp3.1\Core.Service.ServiceDiscovery.AssemblyInfo.cs
+D:\WebSites\Borneo\enterprise-dev-kit\Core.Service.ServiceDiscovery\obj\Debug\netcoreapp3.1\Core.Service.ServiceDiscovery.dll
+D:\WebSites\Borneo\enterprise-dev-kit\Core.Service.ServiceDiscovery\obj\Debug\netcoreapp3.1\Core.Service.ServiceDiscovery.pdb
+D:\WebSites\Borneo\enterprise-dev-kit\dev-kit\src\.core\Core.Service.ServiceDiscovery\bin\Debug\netcoreapp3.1\Core.Service.ServiceDiscovery.deps.json
+D:\WebSites\Borneo\enterprise-dev-kit\dev-kit\src\.core\Core.Service.ServiceDiscovery\bin\Debug\netcoreapp3.1\Core.Service.ServiceDiscovery.dll
+D:\WebSites\Borneo\enterprise-dev-kit\dev-kit\src\.core\Core.Service.ServiceDiscovery\bin\Debug\netcoreapp3.1\Core.Service.ServiceDiscovery.pdb
+D:\WebSites\Borneo\enterprise-dev-kit\dev-kit\src\.core\Core.Service.ServiceDiscovery\obj\Debug\netcoreapp3.1\Core.Service.ServiceDiscovery.csproj.CoreCompileInputs.cache
+D:\WebSites\Borneo\enterprise-dev-kit\dev-kit\src\.core\Core.Service.ServiceDiscovery\obj\Debug\netcoreapp3.1\Core.Service.ServiceDiscovery.AssemblyInfoInputs.cache
+D:\WebSites\Borneo\enterprise-dev-kit\dev-kit\src\.core\Core.Service.ServiceDiscovery\obj\Debug\netcoreapp3.1\Core.Service.ServiceDiscovery.AssemblyInfo.cs
+D:\WebSites\Borneo\enterprise-dev-kit\dev-kit\src\.core\Core.Service.ServiceDiscovery\obj\Debug\netcoreapp3.1\Core.Service.ServiceDiscovery.dll
+D:\WebSites\Borneo\enterprise-dev-kit\dev-kit\src\.core\Core.Service.ServiceDiscovery\obj\Debug\netcoreapp3.1\Core.Service.ServiceDiscovery.pdb

@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "3Uh6QhNaMtDkb9glY6r+p0X+7raWu3ngry3ka3Af47bRLDHhvY84z90cPPz7NzyE39IT8SBjAQQZ96ZJp/7odg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\azarin.sa\\source\\repos\\SimpleCrud\\.core\\Core.Tool\\Core.Tool.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\azarin.sa\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

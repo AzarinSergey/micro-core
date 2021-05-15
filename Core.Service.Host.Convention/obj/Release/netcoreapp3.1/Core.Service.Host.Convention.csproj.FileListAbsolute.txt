@@ -1,0 +1,9 @@
+C:\Repositories\enterprise-dev-kit\dev-kit\src\.core\Core.Service.Host.Convention\bin\Release\netcoreapp3.1\Core.Service.Host.Convention.deps.json
+C:\Repositories\enterprise-dev-kit\dev-kit\src\.core\Core.Service.Host.Convention\bin\Release\netcoreapp3.1\Core.Service.Host.Convention.dll
+C:\Repositories\enterprise-dev-kit\dev-kit\src\.core\Core.Service.Host.Convention\bin\Release\netcoreapp3.1\Core.Service.Host.Convention.pdb
+C:\Repositories\enterprise-dev-kit\dev-kit\src\.core\Core.Service.Host.Convention\obj\Release\netcoreapp3.1\Core.Service.Host.Convention.AssemblyInfoInputs.cache
+C:\Repositories\enterprise-dev-kit\dev-kit\src\.core\Core.Service.Host.Convention\obj\Release\netcoreapp3.1\Core.Service.Host.Convention.AssemblyInfo.cs
+C:\Repositories\enterprise-dev-kit\dev-kit\src\.core\Core.Service.Host.Convention\obj\Release\netcoreapp3.1\Core.Service.Host.Convention.csproj.CoreCompileInputs.cache
+C:\Repositories\enterprise-dev-kit\dev-kit\src\.core\Core.Service.Host.Convention\obj\Release\netcoreapp3.1\Core.Service.Host.Convention.dll
+C:\Repositories\enterprise-dev-kit\dev-kit\src\.core\Core.Service.Host.Convention\obj\Release\netcoreapp3.1\Core.Service.Host.Convention.pdb
+C:\Repositories\enterprise-dev-kit\dev-kit\src\.core\Core.Service.Host.Convention\obj\Release\netcoreapp3.1\Core.Service.Host.Convention.csprojAssemblyReference.cache

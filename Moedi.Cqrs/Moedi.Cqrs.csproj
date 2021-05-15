@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentValidation" Version="10.1.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="5.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Moedi.Cqrs.Messages\Moedi.Cqrs.Messages.csproj" />
+    <ProjectReference Include="..\Moedi.Data.Core\Moedi.Data.Core.csproj" />
+  </ItemGroup>
+
+</Project>

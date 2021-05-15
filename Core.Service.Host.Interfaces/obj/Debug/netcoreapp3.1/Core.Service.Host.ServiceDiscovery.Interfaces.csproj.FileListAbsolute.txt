@@ -1,0 +1,17 @@
+D:\WebSites\Borneo\enterprise-dev-kit\dev-kit\src\.core\Core.Service.Host.ServiceDiscovery.Interfaces\bin\Debug\netcoreapp3.1\Core.Service.Host.ServiceDiscovery.Interfaces.deps.json
+D:\WebSites\Borneo\enterprise-dev-kit\dev-kit\src\.core\Core.Service.Host.ServiceDiscovery.Interfaces\bin\Debug\netcoreapp3.1\Core.Service.Host.ServiceDiscovery.Interfaces.dll
+D:\WebSites\Borneo\enterprise-dev-kit\dev-kit\src\.core\Core.Service.Host.ServiceDiscovery.Interfaces\bin\Debug\netcoreapp3.1\Core.Service.Host.ServiceDiscovery.Interfaces.pdb
+D:\WebSites\Borneo\enterprise-dev-kit\dev-kit\src\.core\Core.Service.Host.ServiceDiscovery.Interfaces\obj\Debug\netcoreapp3.1\Core.Service.Host.ServiceDiscovery.Interfaces.csproj.CoreCompileInputs.cache
+D:\WebSites\Borneo\enterprise-dev-kit\dev-kit\src\.core\Core.Service.Host.ServiceDiscovery.Interfaces\obj\Debug\netcoreapp3.1\Core.Service.Host.ServiceDiscovery.Interfaces.AssemblyInfoInputs.cache
+D:\WebSites\Borneo\enterprise-dev-kit\dev-kit\src\.core\Core.Service.Host.ServiceDiscovery.Interfaces\obj\Debug\netcoreapp3.1\Core.Service.Host.ServiceDiscovery.Interfaces.AssemblyInfo.cs
+D:\WebSites\Borneo\enterprise-dev-kit\dev-kit\src\.core\Core.Service.Host.ServiceDiscovery.Interfaces\obj\Debug\netcoreapp3.1\Core.Service.Host.ServiceDiscovery.Interfaces.dll
+D:\WebSites\Borneo\enterprise-dev-kit\dev-kit\src\.core\Core.Service.Host.ServiceDiscovery.Interfaces\obj\Debug\netcoreapp3.1\Core.Service.Host.ServiceDiscovery.Interfaces.pdb
+D:\WebSites\Borneo\enterprise-dev-kit\dev-kit\src\.core\Core.Service.Host.ServiceDiscovery.Interfaces\obj\Debug\netcoreapp3.1\Core.Service.Host.ServiceDiscovery.Interfaces.csprojAssemblyReference.cache
+C:\Repositories\enterprise-dev-kit\dev-kit\src\.core\Core.Service.Host.ServiceDiscovery.Interfaces\bin\Debug\netcoreapp3.1\Core.Service.Host.ServiceDiscovery.Interfaces.deps.json
+C:\Repositories\enterprise-dev-kit\dev-kit\src\.core\Core.Service.Host.ServiceDiscovery.Interfaces\bin\Debug\netcoreapp3.1\Core.Service.Host.ServiceDiscovery.Interfaces.dll
+C:\Repositories\enterprise-dev-kit\dev-kit\src\.core\Core.Service.Host.ServiceDiscovery.Interfaces\bin\Debug\netcoreapp3.1\Core.Service.Host.ServiceDiscovery.Interfaces.pdb
+C:\Repositories\enterprise-dev-kit\dev-kit\src\.core\Core.Service.Host.ServiceDiscovery.Interfaces\obj\Debug\netcoreapp3.1\Core.Service.Host.ServiceDiscovery.Interfaces.AssemblyInfoInputs.cache
+C:\Repositories\enterprise-dev-kit\dev-kit\src\.core\Core.Service.Host.ServiceDiscovery.Interfaces\obj\Debug\netcoreapp3.1\Core.Service.Host.ServiceDiscovery.Interfaces.AssemblyInfo.cs
+C:\Repositories\enterprise-dev-kit\dev-kit\src\.core\Core.Service.Host.ServiceDiscovery.Interfaces\obj\Debug\netcoreapp3.1\Core.Service.Host.ServiceDiscovery.Interfaces.csproj.CoreCompileInputs.cache
+C:\Repositories\enterprise-dev-kit\dev-kit\src\.core\Core.Service.Host.ServiceDiscovery.Interfaces\obj\Debug\netcoreapp3.1\Core.Service.Host.ServiceDiscovery.Interfaces.dll
+C:\Repositories\enterprise-dev-kit\dev-kit\src\.core\Core.Service.Host.ServiceDiscovery.Interfaces\obj\Debug\netcoreapp3.1\Core.Service.Host.ServiceDiscovery.Interfaces.pdb
