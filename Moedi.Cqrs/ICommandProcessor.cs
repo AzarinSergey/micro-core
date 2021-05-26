@@ -1,6 +1,5 @@
-﻿using System.Threading;
+﻿using Moedi.Cqrs.Messages;
 using System.Threading.Tasks;
-using Moedi.Cqrs.Messages;
 
 namespace Moedi.Cqrs
 {
@@ -8,7 +7,7 @@ namespace Moedi.Cqrs
         where TCommand : DomainMessage
     {
         bool UseTransaction { set; }
-        Task Process(TCommand command, CrossContext ctx, CancellationToken token);
-        Task<DomainEvent[]> ProcessWithEvents(TCommand command, CrossContext ctx, CancellationToken token);
+        Task Process(TCommand command, CrossContext ctx);
+        Task<DomainEvent[]> ProcessWithEvents(TCommand command, CrossContext ctx);
     }
 }

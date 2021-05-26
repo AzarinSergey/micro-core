@@ -4,7 +4,6 @@ using Moedi.Cqrs.Handler;
 using Moedi.Cqrs.Messages;
 using Moedi.Data.Core.Access;
 using System;
-using System.Threading;
 using System.Threading.Tasks;
 
 namespace Moedi.Cqrs.Processor
@@ -46,13 +45,13 @@ namespace Moedi.Cqrs.Processor
             return this;
         }
 
-        public Task Run(Func<CommandHandler<TDomainMessage>> handlerBuilder, CancellationToken token)
+        public Task Run(Func<CommandHandler<TDomainMessage>> handlerBuilder)
             => PrepareProcessor(handlerBuilder)
-                .Process(_domainMessage, _ctx, token);
+                .Process(_domainMessage, _ctx);
 
-        public Task<DomainEvent[]> RunWithEvents(Func<CommandHandler<TDomainMessage>> handlerBuilder, CancellationToken token)
+        public Task<DomainEvent[]> RunWithEvents(Func<CommandHandler<TDomainMessage>> handlerBuilder)
             => PrepareProcessor(handlerBuilder)
-                .ProcessWithEvents(_domainMessage, _ctx, token);
+                .ProcessWithEvents(_domainMessage, _ctx);
 
         private ICommandProcessor<TDomainMessage> PrepareProcessor(Func<CommandHandler<TDomainMessage>> handlerBuilder)
         {

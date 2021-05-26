@@ -6,11 +6,13 @@ using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Text.Json;
 using System.Threading;
 using System.Threading.Tasks;
+using Moedi.Cqrs.Messages;
 
 namespace Core.Service.Host.ApplicationBuilderExtensions
 {
@@ -56,9 +58,6 @@ namespace Core.Service.Host.ApplicationBuilderExtensions
 
                 for (var i = 0; i < methodParams.Length; i++)
                 {
-                    if (methodParams[i].ParameterType.FullName == typeof(CancellationToken).FullName)
-                        continue;
-
                     if (requestParamsJson.RootElement.TryGetProperty(methodParams[i].Name, out var element))
                     {
                         requestParams[i] = Tools.Json.Serializer.Deserialize(element.GetRawText(), methodParams[i].ParameterType);
@@ -70,7 +69,8 @@ namespace Core.Service.Host.ApplicationBuilderExtensions
                 }
             }
 
-            requestParams[^1] = context.RequestAborted;
+            var crossContext = (CrossContext)requestParams[^1];
+            crossContext.Token = context.RequestAborted;
 
             var task = (Task)methodInfo.Invoke(instance, requestParams);
 
@@ -83,7 +83,9 @@ namespace Core.Service.Host.ApplicationBuilderExtensions
 
         private static void ThrowExceptionIfMethodCanNotBeMapped(MethodInfo methodInfo)
         {
-            //TODO: ThrowExceptionIfMethodCanNotBeMapped
+            var methodParams = methodInfo.GetParameters();
+            if (methodParams[^1].ParameterType.FullName != typeof(CrossContext).FullName)
+                throw new MethodAccessException($"Type: '{typeof(CrossContext).FullName}' required as last parameter.");
         }
     }
 }

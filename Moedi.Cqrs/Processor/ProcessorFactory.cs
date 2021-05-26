@@ -3,7 +3,6 @@ using Moedi.Cqrs.Handler;
 using Moedi.Cqrs.Messages;
 using Moedi.Data.Core.Access;
 using System;
-using System.Threading;
 using System.Threading.Tasks;
 
 namespace Moedi.Cqrs.Processor
@@ -27,18 +26,18 @@ namespace Moedi.Cqrs.Processor
             return new CommandProcessorBuilder<TDomainMessage>(ctx, _uowFactory, _loggerFactory);
         }
 
-        public async Task<T> Query<T>(CrossContext ctx, CancellationToken token, QueryHandler<T> handler)
+        public async Task<T> Query<T>(CrossContext ctx, QueryHandler<T> handler)
         {
             var logger = _loggerFactory.CreateLogger($"QueryProcessor[{nameof(handler)}][{ctx.CorrelationUuid}]");
             logger.LogInformation($"Started at {DateTime.Now}");
 
             try
             {
-                using (var uow = _uowFactory.CreateUnitOfWork(null, token))
+                using (var uow = _uowFactory.CreateUnitOfWork(null, ctx.Token))
                 {
                     handler.Uow = uow;
                     handler.Logger = logger;
-                    var result = await handler.Query(token);
+                    var result = await handler.Query(ctx.Token);
 
                     return result;
                 }

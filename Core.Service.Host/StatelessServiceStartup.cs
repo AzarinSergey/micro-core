@@ -96,9 +96,7 @@ namespace Core.Service.Host
                 });
             });
 
-            var serviceEndpointConvention = app.ApplicationServices.GetRequiredService<IServiceEndpointConvention>();
-
-            app.UseServiceEndpoints(ServiceContractTypes, serviceEndpointConvention);
+            app.UseServiceEndpoints(ServiceContractTypes);
         }
 
 

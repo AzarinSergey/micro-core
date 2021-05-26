@@ -24,10 +24,10 @@ namespace Moedi.Cqrs.Processor
 
         public bool UseTransaction { get; set; }
 
-        public Task Process(TCommand command, CrossContext ctx, CancellationToken token)
-            => ProcessWithEvents(command, ctx, token);
+        public Task Process(TCommand command, CrossContext ctx)
+            => ProcessWithEvents(command, ctx);
 
-        public async Task<DomainEvent[]> ProcessWithEvents(TCommand command, CrossContext ctx, CancellationToken token)
+        public async Task<DomainEvent[]> ProcessWithEvents(TCommand command, CrossContext ctx)
         {
             var logger = _loggerFactory.CreateLogger($"CommandProcessor[{nameof(command)}][{ctx.CorrelationUuid}]");
             IUow uow = null;
@@ -36,11 +36,11 @@ namespace Moedi.Cqrs.Processor
                 logger.LogInformation($"Started at {DateTime.Now}");
                 var handler = _handlerBuilder();
                 var transactionUuid = UseTransaction ? Guid.NewGuid() : (Guid?)null;
-                uow = _uowfactory.CreateUnitOfWork(transactionUuid, token);
+                uow = _uowfactory.CreateUnitOfWork(transactionUuid, ctx.Token);
                 handler.Uow = uow;
                 handler.Logger = _loggerFactory.CreateLogger(nameof(handler));
 
-                await handler.Execute(command, token);
+                await handler.Execute(command, ctx.Token);
 
                 await uow.Commit();
 
