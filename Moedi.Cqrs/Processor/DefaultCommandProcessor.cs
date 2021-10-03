@@ -3,21 +3,23 @@ using Moedi.Cqrs.Handler;
 using Moedi.Cqrs.Messages;
 using Moedi.Data.Core.Access;
 using System;
-using System.Threading;
 using System.Threading.Tasks;
 
 namespace Moedi.Cqrs.Processor
 {
-    internal class DefaultCommandProcessor<TCommand> : ICommandProcessor<TCommand>
+    public class DefaultCommandProcessor<TCommand> : ICommandProcessor<TCommand>
         where TCommand : DomainMessage
     {
         private readonly Func<CommandHandler<TCommand>> _handlerBuilder;
+        private readonly IExternalServiceProvider _externalServiceProvider;
         private readonly ILoggerFactory _loggerFactory;
         private readonly IUowFactory _uowfactory;
 
-        internal DefaultCommandProcessor(Func<CommandHandler<TCommand>> handlerBuilder, ILoggerFactory loggerFactory, IUowFactory uowFactory)
+        public DefaultCommandProcessor(Func<CommandHandler<TCommand>> handlerBuilder,
+            IExternalServiceProvider externalServiceProvider, ILoggerFactory loggerFactory, IUowFactory uowFactory)
         {
             _handlerBuilder = handlerBuilder;
+            _externalServiceProvider = externalServiceProvider;
             _loggerFactory = loggerFactory;
             _uowfactory = uowFactory;
         }
@@ -35,12 +37,22 @@ namespace Moedi.Cqrs.Processor
             {
                 logger.LogInformation($"Started at {DateTime.Now}");
                 var handler = _handlerBuilder();
+                handler.Logger = _loggerFactory.CreateLogger(nameof(handler));
+                handler.ExternalServiceProvider = _externalServiceProvider;
+                handler.CancellationToken = ctx.Token;
+
+                await handler.BeforeExecute(async func =>
+                {
+                    using (var nonTransactionalUow = _uowfactory.CreateUnitOfWork(null, ctx.Token))
+                    {
+                        await func(nonTransactionalUow);
+                    }
+                }, command);
+
                 var transactionUuid = UseTransaction ? Guid.NewGuid() : (Guid?)null;
                 uow = _uowfactory.CreateUnitOfWork(transactionUuid, ctx.Token);
-                handler.Uow = uow;
-                handler.Logger = _loggerFactory.CreateLogger(nameof(handler));
 
-                await handler.Execute(command, ctx.Token);
+                await handler.Execute(uow, command);
 
                 await uow.Commit();
 
@@ -57,8 +69,6 @@ namespace Moedi.Cqrs.Processor
             }
             finally
             {
-                
-
                 uow?.Dispose();
 
                 logger.LogInformation($"Done at {DateTime.Now}");

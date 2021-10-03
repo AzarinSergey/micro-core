@@ -21,6 +21,17 @@ namespace Moedi.Data.Ef
             _token = token;
         }
 
+        public async Task CreateOrUpdateAsync(params TEntity[] entities)
+        {
+            var toAddEntities = entities.Where(x => x.Id == default).ToArray();
+
+            if (toAddEntities.Any())
+            {
+                await _context.Set<TEntity>().AddRangeAsync(toAddEntities, _token);
+            }
+            await _context.SaveChangesAsync(_token);
+        }
+
         public async Task<int> CreateOrUpdateAsync(TEntity entity)
         {
             if (entity.Id == default)

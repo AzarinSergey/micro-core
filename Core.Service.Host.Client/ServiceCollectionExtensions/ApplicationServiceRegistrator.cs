@@ -2,13 +2,25 @@
 using Core.Service.Interfaces;
 using Microsoft.Extensions.DependencyInjection;
 using System;
+using System.Net.Http;
 using Core.Service.Host.Convention.Configuration;
 using Microsoft.Extensions.Options;
 
+
 namespace Core.Service.Host.Client.ServiceCollectionExtensions
 {
-    public static class InternalServiceRegistrator
+    public static class ApplicationServiceRegistrator
     {
+        public static void RegisterExternalServiceProxy<TInterface, TClass>(this IServiceCollection services, Action<IServiceProvider, HttpClient> configureHttpClient) 
+            where TClass : class, TInterface 
+            where TInterface : class
+        {
+            services.AddHttpClient<TInterface, TClass>((provider, client) =>
+            {
+                configureHttpClient(provider, client);
+            });
+        }
+
         public static void RegisterInternalServiceProxy<T>(this IServiceCollection services)
             where T : IInternalHttpService
         {

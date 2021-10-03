@@ -14,6 +14,8 @@ namespace Moedi.Data.Ef
 
         protected abstract string Schema { get; }
 
+        protected abstract void ConfigureConnection(DbContextOptionsBuilder b, string connectionString);
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.HasDefaultSchema(Schema);
@@ -40,11 +42,6 @@ namespace Moedi.Data.Ef
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(x =>
-            {
-                x.MigrationsHistoryTable("__EFMigrationsHistory", Schema);
-            });
-
             var envName = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT");
 
             var configuration = new ConfigurationBuilder()
@@ -61,7 +58,7 @@ namespace Moedi.Data.Ef
 
             var connectionString = configuration.Build().GetConnectionString(ConnectionName);
 
-            optionsBuilder.UseSqlServer(connectionString);
+            ConfigureConnection(optionsBuilder, connectionString);
         }
     }
 }

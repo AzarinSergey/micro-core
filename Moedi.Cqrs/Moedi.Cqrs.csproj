@@ -10,8 +10,15 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Core.Service.Host.Interfaces\Core.Service.Interfaces.csproj" />
     <ProjectReference Include="..\Moedi.Cqrs.Messages\Moedi.Cqrs.Messages.csproj" />
     <ProjectReference Include="..\Moedi.Data.Core\Moedi.Data.Core.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Microsoft.Extensions.Http">
+      <HintPath>..\..\..\..\..\..\..\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\3.1.10\ref\netcoreapp3.1\Microsoft.Extensions.Http.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>

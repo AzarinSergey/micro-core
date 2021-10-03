@@ -8,6 +8,8 @@ namespace Moedi.Data.Core.Access
     public interface ICommandRepository<TEntity> : IQueryRepository<TEntity>
          where TEntity : class, IId
     {
+        Task CreateOrUpdateAsync(params TEntity[] entities);
+
         Task<int> CreateOrUpdateAsync(TEntity entity);
 
         Task<int> Update(Expression<Func<TEntity, bool>> condition,

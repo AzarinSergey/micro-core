@@ -1,6 +1,8 @@
 ﻿using Core.Service.Interfaces;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Moedi.Cqrs;
+using Moedi.Cqrs.Processor;
 
 namespace Core.Service.Host.ServiceCollectionExtensions
 {
@@ -27,6 +29,14 @@ namespace Core.Service.Host.ServiceCollectionExtensions
                 where TService : class, TServiceInterface, IInternalHttpService
             {
                 _services.AddSingleton<TServiceInterface, TService>();
+
+                return this;
+            }
+
+            public StatelessServiceRegistrationPipe UseServiceProcessorFactory()
+            {
+                _services.AddTransient<IProcessorFactory, ProcessorFactory>();
+                _services.AddSingleton<IExternalServiceProvider, ExternalServiceProvider>();
 
                 return this;
             }

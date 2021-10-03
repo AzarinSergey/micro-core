@@ -9,5 +9,6 @@ namespace Core.Service.Host.Convention.Configuration
         public string ServiceName { get; set; }
 
         public Dictionary<string,string> InternalServices { get; set; }
+        public Dictionary<string,string> ExternalServices { get; set; }
     }
 }

@@ -4,16 +4,22 @@ using Moedi.Cqrs.Messages;
 using Moedi.Data.Core.Access;
 using System;
 using System.Threading.Tasks;
+using Core.Service.Interfaces;
 
 namespace Moedi.Cqrs.Processor
 {
     public class ProcessorFactory : IProcessorFactory
     {
+        private readonly IExternalServiceProvider _externalServiceProvider;
         private readonly IUowFactory _uowFactory;
         private readonly ILoggerFactory _loggerFactory;
 
-        public ProcessorFactory(IUowFactory uowFactory, ILoggerFactory loggerFactory)
+        public ProcessorFactory(
+            IExternalServiceProvider externalServiceProvider,
+            IUowFactory uowFactory, 
+            ILoggerFactory loggerFactory)
         {
+            _externalServiceProvider = externalServiceProvider;
             _uowFactory = uowFactory;
             _loggerFactory = loggerFactory;
         }
@@ -23,7 +29,7 @@ namespace Moedi.Cqrs.Processor
             _loggerFactory.CreateLogger($"ProcessorFactory[{ctx.CorrelationUuid}]")
                 .LogInformation($"Prepare processing for '{nameof(model)}'");
 
-            return new CommandProcessorBuilder<TDomainMessage>(ctx, _uowFactory, _loggerFactory);
+            return new CommandProcessorBuilder<TDomainMessage>(ctx, _externalServiceProvider, _uowFactory, _loggerFactory);
         }
 
         public async Task<T> Query<T>(CrossContext ctx, QueryHandler<T> handler)
@@ -35,9 +41,8 @@ namespace Moedi.Cqrs.Processor
             {
                 using (var uow = _uowFactory.CreateUnitOfWork(null, ctx.Token))
                 {
-                    handler.Uow = uow;
                     handler.Logger = logger;
-                    var result = await handler.Query(ctx.Token);
+                    var result = await handler.Query(uow, ctx.Token);
 
                     return result;
                 }

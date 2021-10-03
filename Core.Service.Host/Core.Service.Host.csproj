@@ -25,6 +25,7 @@
     <ProjectReference Include="..\Core.Service.Host.Interfaces\Core.Service.Interfaces.csproj" />
     <ProjectReference Include="..\Core.Tool\Core.Tool.csproj" />
     <ProjectReference Include="..\Moedi.Cqrs.Messages\Moedi.Cqrs.Messages.csproj" />
+    <ProjectReference Include="..\Moedi.Cqrs\Moedi.Cqrs.csproj" />
   </ItemGroup>
 
 </Project>

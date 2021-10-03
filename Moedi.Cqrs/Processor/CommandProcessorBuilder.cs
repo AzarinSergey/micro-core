@@ -5,6 +5,7 @@ using Moedi.Cqrs.Messages;
 using Moedi.Data.Core.Access;
 using System;
 using System.Threading.Tasks;
+using Core.Service.Interfaces;
 
 namespace Moedi.Cqrs.Processor
 {
@@ -12,17 +13,20 @@ namespace Moedi.Cqrs.Processor
         where TDomainMessage : DomainMessage
     {
         private readonly CrossContext _ctx;
+        private readonly IExternalServiceProvider _externalServiceProvider;
         private readonly IUowFactory _uowFactory;
         private readonly ILoggerFactory _loggerFactory;
 
         private TDomainMessage _domainMessage;
-        private IValidator<TDomainMessage> _validator;
+        private Func<IValidator<TDomainMessage>> _validator;
         private bool _useTransaction;
 
-        public CommandProcessorBuilder(CrossContext ctx, IUowFactory uowFactory,
+        public CommandProcessorBuilder(CrossContext ctx, IExternalServiceProvider externalServiceProvider,
+            IUowFactory uowFactory,
             ILoggerFactory loggerFactory)
         {
             _ctx = ctx ?? throw new ArgumentNullException(nameof(ctx), "Correlation unreachable");
+            _externalServiceProvider = externalServiceProvider ?? throw new ArgumentNullException(nameof(externalServiceProvider));
             _uowFactory = uowFactory ?? throw new ArgumentNullException(nameof(uowFactory));
             _loggerFactory = loggerFactory ?? throw new ArgumentNullException(nameof(loggerFactory));
         }
@@ -33,9 +37,10 @@ namespace Moedi.Cqrs.Processor
             return this;
         }
 
-        public CommandProcessorBuilder<TDomainMessage> UseValidator(IValidator<TDomainMessage> validator)
+        public CommandProcessorBuilder<TDomainMessage> UseValidator<T>()
+            where T : IValidator<TDomainMessage>, new()
         {
-            _validator = validator;
+            _validator = () => new T();
             return this;
         }
 
@@ -62,15 +67,16 @@ namespace Moedi.Cqrs.Processor
 
             if (_validator != null)
             {
-                var vResult = _validator.Validate(_domainMessage);
+                var vResult = _validator().Validate(_domainMessage);
                 if (!vResult.IsValid)
                     throw new ValidationException(vResult.Errors);
             }
 
-            var processor = new DefaultCommandProcessor<TDomainMessage>(handlerBuilder, _loggerFactory, _uowFactory)
+            var processor = new DefaultCommandProcessor<TDomainMessage>(handlerBuilder, _externalServiceProvider, _loggerFactory, _uowFactory)
             {
                 UseTransaction = _useTransaction
             };
+
             return processor;
         }
     }
